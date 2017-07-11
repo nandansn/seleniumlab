@@ -1,0 +1,12 @@
+{
+  "findJobButton": {
+    "id": "fj"
+  },
+  "link": "https://www.indeed.co.uk/",
+  "whatTextBox": {
+    "id": "what"
+  },
+  "whereTextBox": {
+    "id": "where"
+  }
+}

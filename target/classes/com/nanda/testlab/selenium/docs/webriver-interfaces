@@ -1,0 +1,11 @@
+WebDriver Interface:
+	Chrome
+	FireFox
+	IE
+	etc...
+	
+WebElement Interface: used to interact with web elements of the page like buttons, textbox , radiobutton etc...
+	click()
+	sendKeys()
+	clear()
+	etc..

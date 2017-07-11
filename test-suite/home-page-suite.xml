@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Indeed-App-Home-Page-Suite">
+	<test name="Indeed-Home-Page-Test">
+		<classes>
+
+			<class name="com.nanda.testlab.selenium.test.IndeedHomePageTest">
+			</class>
+
+		</classes>
+	</test>
+</suite>

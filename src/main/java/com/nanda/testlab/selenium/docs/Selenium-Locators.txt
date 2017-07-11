@@ -1,0 +1,23 @@
+Selenium webdriver uses 8 locators to find the elements on web page. The following are the list of object identifier or locators supported by selenium.
+
+We have prioritized the list of locators to be used when scripting.
+
+id Select element with the specified @id attribute.
+
+Name Select first element with the specified @name attribute.
+
+Linktext Select link (anchor tag) element which contains text matching the specified link text
+
+Partial Linktext Select link (anchor tag) element which contains text matching the specified partial link text
+
+Tag Name Locate Element using a Tag Name .
+
+Class name Locate Element using a Tag Name ..
+
+Css Select the element using css selectors. You can check here for Css examples and You can also refer W3C CSS Locatros
+
+Xpath Locate an element using an XPath expression.
+
+Locating an Element By ID:
+The most efficient way and preferred way to locate an element on a web page is By ID. ID will be the unique on web page which can be easily identified.
+IDs are the safest and fastest locator option and should always be the first choice even when there are multiple choices, It is like an Employee Number or Account which will be unique.
