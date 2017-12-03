@@ -2,24 +2,24 @@
 <testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="15916" started-at="2017-11-13T11:46:14Z" finished-at="2017-11-13T11:46:30Z">
+  <suite name="Default suite" duration-ms="13247" started-at="2017-12-03T18:19:01Z" finished-at="2017-12-03T18:19:14Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="15916" started-at="2017-11-13T11:46:14Z" finished-at="2017-11-13T11:46:30Z">
-      <class name="com.nanda.testlab.selenium.guru99.test.RegisterPageTest">
-        <test-method status="PASS" signature="init()[pri:0, instance:com.nanda.testlab.selenium.guru99.test.RegisterPageTest@29774679]" name="init" is-config="true" duration-ms="3163" started-at="2017-11-13T17:16:14Z" finished-at="2017-11-13T17:16:17Z">
+    <test name="Default test" duration-ms="13247" started-at="2017-12-03T18:19:01Z" finished-at="2017-12-03T18:19:14Z">
+      <class name="com.nanda.testlab.selenium.guru99.test.JSExecutorTest">
+        <test-method status="PASS" signature="init()[pri:0, instance:com.nanda.testlab.selenium.guru99.test.JSExecutorTest@5e5792a0]" name="init" is-config="true" duration-ms="7941" started-at="2017-12-03T23:49:01Z" finished-at="2017-12-03T23:49:09Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- init -->
-        <test-method status="PASS" signature="testRegister()[pri:0, instance:com.nanda.testlab.selenium.guru99.test.RegisterPageTest@29774679]" name="testRegister" duration-ms="10677" started-at="2017-11-13T17:16:17Z" finished-at="2017-11-13T17:16:28Z">
+        <test-method status="PASS" signature="testJS()[pri:0, instance:com.nanda.testlab.selenium.guru99.test.JSExecutorTest@5e5792a0]" name="testJS" duration-ms="3174" started-at="2017-12-03T23:49:09Z" finished-at="2017-12-03T23:49:12Z">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- testRegister -->
-        <test-method status="PASS" signature="close()[pri:0, instance:com.nanda.testlab.selenium.guru99.test.RegisterPageTest@29774679]" name="close" is-config="true" duration-ms="2056" started-at="2017-11-13T17:16:28Z" finished-at="2017-11-13T17:16:30Z">
+        </test-method> <!-- testJS -->
+        <test-method status="PASS" signature="close()[pri:0, instance:com.nanda.testlab.selenium.guru99.test.JSExecutorTest@5e5792a0]" name="close" is-config="true" duration-ms="2112" started-at="2017-12-03T23:49:12Z" finished-at="2017-12-03T23:49:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- close -->
-      </class> <!-- com.nanda.testlab.selenium.guru99.test.RegisterPageTest -->
+      </class> <!-- com.nanda.testlab.selenium.guru99.test.JSExecutorTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
