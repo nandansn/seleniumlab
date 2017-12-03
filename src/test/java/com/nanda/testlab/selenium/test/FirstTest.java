@@ -9,9 +9,9 @@ import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.nanda.testng.lab.listeners.MyListener;
+/*import com.nanda.testng.lab.listeners.MyListener;
 import com.nanda.testng.logging.LoggingType;
-import com.nanda.testng.logging.TestConsoleLogger;
+import com.nanda.testng.logging.TestConsoleLogger;*/
 
 
 /**
@@ -20,7 +20,7 @@ import com.nanda.testng.logging.TestConsoleLogger;
  *
  */
 @Test
-@Listeners(MyListener.class)
+//@Listeners(MyListener.class)
 public class FirstTest {
     
     static final String APP_HOME_URL ="http://www.google.com";
@@ -41,7 +41,7 @@ public class FirstTest {
 	StringBuilder logMessage = new StringBuilder();
 	logMessage.append("Window Title:").append(fireFoxDriver.getTitle());
 	
-	TestConsoleLogger.log(LoggingType.Info, logMessage);
+	//TestConsoleLogger.log(LoggingType.Info, logMessage);
 	
 	Thread.sleep(3000);
 	

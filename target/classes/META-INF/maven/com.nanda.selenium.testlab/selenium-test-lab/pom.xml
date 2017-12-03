@@ -14,11 +14,15 @@
 			<version>3.3.1</version>
 		</dependency>
 
+		<!-- https://mvnrepository.com/artifact/org.testng/testng -->
 		<dependency>
-			<groupId>com.nanda.testng.testlab</groupId>
-			<artifactId>testng-test-lab</artifactId>
-			<version>0.0.1-SNAPSHOT</version>
+			<groupId>org.testng</groupId>
+			<artifactId>testng</artifactId>
+			<version>6.11</version>
+			<scope>test</scope>
 		</dependency>
+
+
 
 		<!-- https://mvnrepository.com/artifact/log4j/log4j -->
 		<dependency>
@@ -27,7 +31,7 @@
 			<version>1.2.17</version>
 		</dependency>
 
-		
+
 
 
 

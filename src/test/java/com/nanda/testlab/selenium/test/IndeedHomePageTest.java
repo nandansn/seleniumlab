@@ -13,13 +13,13 @@ import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.nanda.testlab.selenium.page.IndeedHomePage;
 import com.nanda.testlab.selenium.page.Page;
-import com.nanda.testng.lab.listeners.WebTestListener;
+//import com.nanda.testng.lab.listeners.WebTestListener;
 
 /**
  * @author Nandakumar 20-Apr-2017
  *
  */
-@Listeners(WebTestListener.class)
+//@Listeners(WebTestListener.class)
 public class IndeedHomePageTest {
 
     /*

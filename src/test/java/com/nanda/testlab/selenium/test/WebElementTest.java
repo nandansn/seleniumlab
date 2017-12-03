@@ -10,14 +10,14 @@ import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.nanda.testng.lab.listeners.WebTestListener;
+//import com.nanda.testng.lab.listeners.WebTestListener;
 
 /**
  * @author Nandakumar 
  * 26-Apr-2017
  *
  */
-@Listeners(WebTestListener.class)
+//@Listeners(WebTestListener.class)
 public class WebElementTest {
     
     @Test

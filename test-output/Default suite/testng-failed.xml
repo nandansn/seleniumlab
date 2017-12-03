@@ -3,13 +3,13 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test name="Default test(failed)">
     <classes>
-      <class name="com.nanda.app.store.test.WebElementsTest">
+      <class name="com.nanda.testlab.selenium.guru99.test.RegisterPageTest">
         <methods>
-          <include name="testElements"/>
-          <include name="startDriver"/>
-          <include name="stopDriver"/>
+          <include name="close"/>
+          <include name="testRegister"/>
+          <include name="init"/>
         </methods>
-      </class> <!-- com.nanda.app.store.test.WebElementsTest -->
+      </class> <!-- com.nanda.testlab.selenium.guru99.test.RegisterPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
