@@ -19,7 +19,7 @@ import org.testng.annotations.Test;
 
 public class MobilePageTest {
 
-	WebDriver firefoxDriver = null;
+	WebDriver chromerDriver = null;
 
 	String ecommSiteUrl = "http://live.guru99.com/index.php/";
 
@@ -28,36 +28,36 @@ public class MobilePageTest {
 
 		System.setProperty("webdriver.chrome.driver", "C:\\Users\\nandakumar_rangasamy\\chromedriver\\chromedriver.exe");
 
-		firefoxDriver = new ChromeDriver();
+		chromerDriver = new ChromeDriver();
 	}
 
 	@Test
 	public void testMobileList() {
 
-		firefoxDriver.get(ecommSiteUrl);
+		chromerDriver.get(ecommSiteUrl);
 
-		WebElement headElement = firefoxDriver.findElement(By.tagName("h2"));
+		WebElement headElement = chromerDriver.findElement(By.tagName("h2"));
 		String titleText = headElement.getText();
 
 		Assert.assertTrue(titleText.contains("THIS IS DEMO SITE"));
 
-		WebElement mobileMenu = firefoxDriver.findElement(By.xpath("//*[@id=\"nav\"]/ol/li[1]/a"));
+		WebElement mobileMenu = chromerDriver.findElement(By.xpath("//*[@id=\"nav\"]/ol/li[1]/a"));
 
 		mobileMenu.click();
 
-		WebElement mobileTitle = firefoxDriver
+		WebElement mobileTitle = chromerDriver
 				.findElement(By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[1]/h1"));
 		
 		
 
 		Assert.assertTrue(mobileTitle.getText().contains("MOBILE"));
 
-		Select mobileSelectOptions = new Select(firefoxDriver.findElement(
+		Select mobileSelectOptions = new Select(chromerDriver.findElement(
 				By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[3]/div[1]/div[1]/div/select")));
 
 		mobileSelectOptions.selectByVisibleText("Name");
 
-		List<WebElement> mobileList = firefoxDriver
+		List<WebElement> mobileList = chromerDriver
 				.findElements(By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li"));
 
 		List<String> actualNames = new ArrayList<String>();
@@ -78,9 +78,32 @@ public class MobilePageTest {
 
 	}
 	
+	@Test
+	public void testMobileDetails() {
+		
+		chromerDriver.get(ecommSiteUrl);
+		
+		
+		WebElement mobileMenu = chromerDriver.findElement(By.xpath("//*[@id=\"nav\"]/ol/li[1]/a"));
+		
+		mobileMenu.click();
+		
+		String sonyXperiaPrice = chromerDriver.findElement(By.xpath("//*[@id=\"product-price-1\"]/span")).getText();
+		
+		
+		chromerDriver.findElement(By.xpath("//*[@id=\"product-collection-image-1\"]")).click();
+		
+		
+		String sonyXperiaPriceInDetailsPage = chromerDriver.findElement(By.xpath("//*[@id=\"product-price-1\"]/span")).getText();
+		
+		Assert.assertEquals(sonyXperiaPrice, sonyXperiaPriceInDetailsPage);
+		
+		
+	}
+	
 	@AfterMethod
 	public void closeApp() {
-		firefoxDriver.close();
+		chromerDriver.close();
 	}
 
 }
