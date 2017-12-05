@@ -26,7 +26,8 @@ public class MobilePageTest {
 	@BeforeMethod
 	public void setDriver() {
 
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\nandakumar_rangasamy\\chromedriver\\chromedriver.exe");
+		System.setProperty("webdriver.chrome.driver",
+				"C:\\Users\\nandakumar_rangasamy\\chromedriver\\chromedriver.exe");
 
 		chromerDriver = new ChromeDriver();
 	}
@@ -35,6 +36,8 @@ public class MobilePageTest {
 	public void testMobileList() {
 
 		chromerDriver.get(ecommSiteUrl);
+
+		int[] arry = null;
 
 		WebElement headElement = chromerDriver.findElement(By.tagName("h2"));
 		String titleText = headElement.getText();
@@ -47,8 +50,6 @@ public class MobilePageTest {
 
 		WebElement mobileTitle = chromerDriver
 				.findElement(By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[1]/h1"));
-		
-		
 
 		Assert.assertTrue(mobileTitle.getText().contains("MOBILE"));
 
@@ -77,30 +78,54 @@ public class MobilePageTest {
 		Assert.assertTrue(actualNames.equals(expectedNames));
 
 	}
-	
+
 	@Test
 	public void testMobileDetails() {
-		
+
 		chromerDriver.get(ecommSiteUrl);
-		
-		
+
 		WebElement mobileMenu = chromerDriver.findElement(By.xpath("//*[@id=\"nav\"]/ol/li[1]/a"));
-		
+
+		mobileMenu.click();
+
+		String sonyXperiaPrice = chromerDriver.findElement(By.xpath("//*[@id=\"product-price-1\"]/span")).getText();
+
+		chromerDriver.findElement(By.xpath("//*[@id=\"product-collection-image-1\"]")).click();
+
+		String sonyXperiaPriceInDetailsPage = chromerDriver.findElement(By.xpath("//*[@id=\"product-price-1\"]/span"))
+				.getText();
+
+		Assert.assertEquals(sonyXperiaPrice, sonyXperiaPriceInDetailsPage);
+
+	}
+
+	@Test
+	public void testErrorVerification() {
+
+		chromerDriver.get(ecommSiteUrl);
+
+		WebElement mobileMenu = chromerDriver.findElement(By.xpath("//*[@id=\"nav\"]/ol/li[1]/a"));
+
 		mobileMenu.click();
 		
-		String sonyXperiaPrice = chromerDriver.findElement(By.xpath("//*[@id=\"product-price-1\"]/span")).getText();
+		chromerDriver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li[1]/div/div[3]/button/span/span")).click();
 		
+		chromerDriver.findElement(By.xpath("//*[@id=\"shopping-cart-table\"]/tbody/tr/td[4]/input")).sendKeys("1000");
 		
-		chromerDriver.findElement(By.xpath("//*[@id=\"product-collection-image-1\"]")).click();
+		chromerDriver.findElement(By.xpath("//*[@id=\"shopping-cart-table\"]/tbody/tr/td[4]/button")).click();
 		
+		String errorMessage = chromerDriver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div/div/ul/li/ul/li/span")).getText();
 		
-		String sonyXperiaPriceInDetailsPage = chromerDriver.findElement(By.xpath("//*[@id=\"product-price-1\"]/span")).getText();
+		Assert.assertEquals(errorMessage, "Some of the products cannot be ordered in requested quantity.");
 		
-		Assert.assertEquals(sonyXperiaPrice, sonyXperiaPriceInDetailsPage);
+		chromerDriver.findElement(By.xpath("//*[@id=\"empty_cart_button\"]/span/span")).click();
 		
+		String emptyCartMessage = chromerDriver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div/div[1]/h1")).getText();
 		
+		Assert.assertEquals(emptyCartMessage, "SHOPPING CART IS EMPTY");
+
 	}
-	
+
 	@AfterMethod
 	public void closeApp() {
 		chromerDriver.close();
