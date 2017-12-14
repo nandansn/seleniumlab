@@ -3,6 +3,7 @@ package com.nanda.app.ecomm.gurru99;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
+import java.util.Set;
 import java.util.TreeSet;
 
 import org.openqa.selenium.By;
@@ -108,7 +109,8 @@ public class MobilePageTest {
 
 		mobileMenu.click();
 		
-		chromerDriver.findElement(By.xpath("//*[@id=\"top\"]/body/div/div/div[2]/div/div[2]/div[1]/div[3]/ul/li[1]/div/div[3]/button/span/span")).click();
+		
+		chromerDriver.findElement(By.xpath("//h2[@class='product-name']/a[contains(text(),'Sony')]/../following-sibling::div/following-sibling::div/following-sibling::div/button/span/span")).click();
 		
 		chromerDriver.findElement(By.xpath("//*[@id=\"shopping-cart-table\"]/tbody/tr/td[4]/input")).sendKeys("1000");
 		
@@ -124,6 +126,41 @@ public class MobilePageTest {
 		
 		Assert.assertEquals(emptyCartMessage, "SHOPPING CART IS EMPTY");
 
+	}
+	
+	@Test
+	public void testPopUp() {
+		
+		chromerDriver.get(ecommSiteUrl);
+
+		WebElement mobileMenu = chromerDriver.findElement(By.xpath("//*[@id=\"nav\"]/ol/li[1]/a"));
+
+		mobileMenu.click();
+		
+		chromerDriver.findElement(By.xpath("//h2[@class='product-name']/a[contains(text(),'Sony')]/../following-sibling::div/following-sibling::div/following-sibling::div/ul/li[2]/a")).click();
+		
+		chromerDriver.findElement(By.xpath("//h2[@class='product-name']/a[contains(text(),'IPhone')]/../following-sibling::div/following-sibling::div/following-sibling::div/ul/li[2]/a")).click();
+		
+		chromerDriver.findElement(By.xpath("//div[@class='actions']/button[@type='button' and @title='Compare']/span")).click();
+		
+		
+		Set<String> popUpWindows = chromerDriver.getWindowHandles();
+		
+		Iterator<String> popUpWindow = popUpWindows.iterator();
+		
+		while(popUpWindow.hasNext()) {
+			String window = popUpWindow.next();
+			
+			if(chromerDriver.switchTo().window(window).getTitle().contains("Products Comparison List")){
+			
+			Assert.assertTrue(chromerDriver.findElement(By.xpath("//*[@id=\"product_comparison\"]/tbody[1]/tr[1]/td[1]/h2/a")).getText().contains("SONY"));
+			
+			Assert.assertTrue(chromerDriver.findElement(By.xpath("//*[@id=\"product_comparison\"]/tbody[1]/tr[1]/td[2]/h2/a")).getText().contains("IPHONE"));
+			
+			}
+			
+			
+		}
 	}
 
 	@AfterMethod

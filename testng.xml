@@ -1,0 +1,12 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="rest-assured-pgs-suite">
+
+	<test name="rest-assured-config-service">
+
+		<classes>
+			<class name="com.nanda.app.ecomm.gurru99.PurchaseItemTest"></class>
+		</classes>
+	</test>
+
+</suite>
