@@ -5,7 +5,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
 
-import com.gargoylesoftware.htmlunit.javascript.background.JavaScriptExecutor;
+
 
 public class JSExecutorTest extends BaseTest {
 
