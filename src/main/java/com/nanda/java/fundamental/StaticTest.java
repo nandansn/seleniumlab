@@ -2,6 +2,8 @@ package com.nanda.java.fundamental;
 
 public class StaticTest {
 
+
+
     int instanceVariable;
     static {
         System.out.println("static block");
