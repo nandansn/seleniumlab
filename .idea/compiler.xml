@@ -10,7 +10,7 @@
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
-      <module name="selenium-test-lab" target="1.5" />
+      <module name="selenium-test-lab" target="8" />
     </bytecodeTargetLevel>
   </component>
 </project>

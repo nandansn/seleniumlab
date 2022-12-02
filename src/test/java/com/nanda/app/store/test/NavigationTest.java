@@ -21,13 +21,13 @@ import org.testng.annotations.Test;
 public class NavigationTest {
     
     WebDriver driver = null;
-    String url = "http://www.demoqa.com/";
+    String url = "http://www.amazon.in/";
     final private static Logger logger = LogManager.getLogger("Store App Navigation Test");
 
     @BeforeClass
     public void startDriver() {
 
-	System.setProperty("webdriver.chrome.driver", "C:/chromedriver/chromedriver.exe");
+	System.setProperty("webdriver.chrome.driver", "/Users/nrangasa/driver/chromedriver");
 	driver = new ChromeDriver();
     }
 
@@ -36,13 +36,15 @@ public class NavigationTest {
 
 	driver.get(url);
 	
-	driver.findElement(By.xpath(".//*[@id='menu-item-374']/a")).click();
+	driver.findElement(By.xpath(".//*[@id='nav-hamburger-menu']")).click();
 
 	logger.info("Back:" );
 	driver.navigate().back();
-	
+
+	logger.info("Forward:" );
 	driver.navigate().forward();
-	
+
+	logger.info("Navigate to:" );
 	driver.navigate().to(url);
 	
 	driver.navigate().refresh();

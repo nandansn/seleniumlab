@@ -1,4 +1,5 @@
 .classpath
+.idea/
 target/
 pom.xml.tag
 pom.xml.releaseBackup
@@ -16,3 +17,4 @@ buildNumber.properties
 .settings/
 .target/
 .test-output/
+
