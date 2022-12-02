@@ -1,6 +1,9 @@
 package com.nanda.testlab.selenium.link;
 
-import org.apache.log4j.Logger;
+import com.nanda.testlab.selenium.select.SelectAPITest;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -8,15 +11,13 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.nanda.testlab.selenium.select.SelectAPITest;
-
 public class LinksAPITest {
 	
 	WebDriver driver;
 
 	String url = "http://live.guru99.com/index.php/";
 
-	final static Logger logger = Logger.getLogger(SelectAPITest.class);
+	final static Logger logger = LogManager.getLogger(SelectAPITest.class);
 
 	@BeforeMethod
 	public void launchApp() {

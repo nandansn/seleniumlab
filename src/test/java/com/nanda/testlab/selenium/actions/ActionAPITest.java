@@ -1,6 +1,8 @@
 package com.nanda.testlab.selenium.actions;
 
-import org.apache.log4j.Logger;
+import com.nanda.testlab.selenium.select.SelectAPITest;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -11,15 +13,15 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
-import com.nanda.testlab.selenium.select.SelectAPITest;
-
 public class ActionAPITest {
 
 	WebDriver driver;
 
 	String url = "http://live.guru99.com/index.php/";
 
-	final static Logger logger = Logger.getLogger(SelectAPITest.class);
+	final static Logger logger = LogManager.getLogger(SelectAPITest.class);
+
+
 
 	@BeforeMethod
 	public void launchApp() {

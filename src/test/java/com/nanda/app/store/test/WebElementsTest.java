@@ -3,14 +3,15 @@
  */
 package com.nanda.app.store.test;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
 /**
@@ -21,7 +22,7 @@ public class WebElementsTest {
 
     WebDriver driver = null;
     String url = "http://www.demoqa.com/";
-    final private static Logger logger = Logger.getLogger("Store App Elements Test");
+    final private static Logger logger = LogManager.getLogger("Store App Elements Test");
 
     @BeforeClass
     public void startDriver() {

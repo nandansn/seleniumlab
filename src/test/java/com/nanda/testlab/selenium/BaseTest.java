@@ -3,10 +3,10 @@
  */
 package com.nanda.testlab.selenium;
 
+import com.nanda.testlab.selenium.driver.DriverHelper;
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import com.nanda.testlab.selenium.driver.DriverHelper;
 //import com.nanda.testng.logging.LoggingType;
 //import com.nanda.testng.logging.TestConsoleLogger;
 

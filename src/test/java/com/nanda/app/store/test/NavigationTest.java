@@ -3,9 +3,9 @@
  */
 package com.nanda.app.store.test;
 
-import static org.testng.Assert.assertEquals;
 
-import org.apache.log4j.Logger;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -22,7 +22,7 @@ public class NavigationTest {
     
     WebDriver driver = null;
     String url = "http://www.demoqa.com/";
-    final private static Logger logger = Logger.getLogger("Store App Navigation Test");
+    final private static Logger logger = LogManager.getLogger("Store App Navigation Test");
 
     @BeforeClass
     public void startDriver() {

@@ -1,16 +1,5 @@
 package com.nanda.app.ecomm.gurru99;
 
-import java.util.Random;
-
-import org.apache.log4j.Logger;
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.Select;
-import org.openqa.selenium.support.ui.WebDriverWait;
-import org.testng.Assert;
-import org.testng.annotations.Test;
-
 import com.nanda.testlab.selenium.actions.AccountDashboardPageActions;
 import com.nanda.testlab.selenium.actions.LoginPageActions;
 import com.nanda.testlab.selenium.ecomm.page.AccountDashboardPage;
@@ -21,13 +10,25 @@ import com.nanda.testlab.selenium.ecomm.page.MobilePage;
 import com.nanda.testlab.selenium.ecomm.page.ProductConfigurePage;
 import com.nanda.testlab.selenium.ecomm.page.ShoppingCartPage;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.testng.Assert;
+import org.testng.annotations.Test;
+
+import java.util.Random;
+
 @Test
 public class PurchaseItemTest extends BaseTest {
 
 	String email = "jumjum" + new Random().nextInt() + "@gmail.com";
 	String userPassword = "password123";
 
-	final static Logger logger = Logger.getLogger(PurchaseItemTest.class);
+	final static Logger logger = LogManager.getLogger(PurchaseItemTest.class);
 
 	@Test
 	public void testAccountCreation() {

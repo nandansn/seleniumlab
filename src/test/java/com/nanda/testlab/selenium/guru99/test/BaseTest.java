@@ -1,6 +1,8 @@
 package com.nanda.testlab.selenium.guru99.test;
 
-import org.apache.log4j.Logger;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
@@ -27,7 +29,7 @@ public class BaseTest {
 		driver = new ChromeDriver(capabilities);
 		driver = new ChromeDriver();
 
-		logger = Logger.getLogger("Registration Form Test");
+		logger = LogManager.getLogger("Registration Form Test");
 
 	}
 

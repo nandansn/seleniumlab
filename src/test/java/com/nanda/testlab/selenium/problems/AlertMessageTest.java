@@ -3,11 +3,10 @@
  */
 package com.nanda.testlab.selenium.problems;
 
+import com.nanda.testlab.selenium.driver.DriverHelper;
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-
-import com.nanda.testlab.selenium.driver.DriverHelper;
 
 /**
  * @author Nandakumar 

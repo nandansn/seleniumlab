@@ -3,9 +3,11 @@
  */
 package com.nanda.testlab.selenium.page;
 
-import java.util.concurrent.TimeUnit;
-
-import org.apache.log4j.Logger;
+import com.nanda.testlab.selenium.driver.DriverHelper;
+import com.nanda.testlab.selenium.page.element.Button;
+import com.nanda.testlab.selenium.page.element.TextBox;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -13,9 +15,7 @@ import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Wait;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.nanda.testlab.selenium.driver.DriverHelper;
-import com.nanda.testlab.selenium.page.element.Button;
-import com.nanda.testlab.selenium.page.element.TextBox;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author Nandakumar 20-Apr-2017
@@ -24,7 +24,7 @@ import com.nanda.testlab.selenium.page.element.TextBox;
 public class Page {
 
     final static WebDriver driver = DriverHelper.getChromeDriver();
-    final static Logger log = Logger.getLogger(Page.class);
+    final static Logger log = LogManager.getLogger(Page.class);
 
     static void open(String link) {
 	

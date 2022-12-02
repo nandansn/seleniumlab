@@ -3,16 +3,15 @@
  */
 package com.nanda.testlab.selenium.test;
 
-import java.io.FileNotFoundException;
-
-import org.apache.log4j.Logger;
-import org.testng.annotations.Listeners;
-import org.testng.annotations.Test;
-
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.nanda.testlab.selenium.page.IndeedHomePage;
-import com.nanda.testlab.selenium.page.Page;
+
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.testng.annotations.Test;
+
+import java.io.FileNotFoundException;
 //import com.nanda.testng.lab.listeners.WebTestListener;
 
 /**
@@ -60,7 +59,7 @@ public class IndeedHomePageTest {
     @Test
     public void testMe(){
 	
-	 Logger log = Logger.getLogger(IndeedHomePageTest.class);
+	 Logger log = LogManager.getLogger(IndeedHomePageTest.class);
 	 log.info("Nanda");
     }
 

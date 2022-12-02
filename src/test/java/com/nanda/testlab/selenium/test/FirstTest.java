@@ -6,7 +6,6 @@ package com.nanda.testlab.selenium.test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.annotations.BeforeTest;
-import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 /*import com.nanda.testng.lab.listeners.MyListener;

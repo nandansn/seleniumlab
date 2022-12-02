@@ -3,17 +3,13 @@
  */
 package com.nanda.testlab.selenium.page;
 
-import java.io.FileNotFoundException;
-
-import org.apache.log4j.Logger;
-import org.openqa.selenium.support.FindBy;
-
 import com.google.gson.JsonIOException;
 import com.google.gson.JsonSyntaxException;
 import com.nanda.testlab.selenium.page.element.Button;
-import com.nanda.testlab.selenium.page.element.Link;
 import com.nanda.testlab.selenium.page.element.TextBox;
 import com.nanda.testlab.selenium.resource.util.JsonPageDataToPageObjectMapper;
+
+import java.io.FileNotFoundException;
 
 /**
  * @author Nandakumar 20-Apr-2017

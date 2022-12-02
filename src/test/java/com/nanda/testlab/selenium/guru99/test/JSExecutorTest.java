@@ -1,9 +1,9 @@
 package com.nanda.testlab.selenium.guru99.test;
 
-import java.util.concurrent.TimeUnit;
-
 import org.openqa.selenium.JavascriptExecutor;
 import org.testng.annotations.Test;
+
+import java.util.concurrent.TimeUnit;
 
 
 

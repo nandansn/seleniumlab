@@ -1,12 +1,11 @@
 package com.nanda.testlab.selenium.guru99.test;
 
-import java.util.Iterator;
-import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.annotations.Test;
+
+import java.util.List;
 
 public class RegisterPageTest extends BaseTest{
 	
